@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+* {
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --bg: #fafaf8;
+  --panel: #ffffff;
+  --ink: #111111;
+  --muted: #6b6b6b;
+  --line: #e8e6e1;
+  --accent: #111111;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  margin: 0;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #d6d3ce; border-radius: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+.shimmer {
+  background: linear-gradient(90deg, #f2f0eb 25%, #fafaf8 50%, #f2f0eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
